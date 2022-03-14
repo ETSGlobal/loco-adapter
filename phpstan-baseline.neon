@@ -1,7 +1,7 @@
 parameters:
     ignoreErrors:
         -
-            message: "#^Method Translation\\\\PlatformAdapter\\\\Loco\\\\Bridge\\\\Symfony\\\\DependencyInjection\\\\TranslationAdapterLocoExtension\\:\\:load\\(\\) has no return typehint specified\\.$#"
+            message: "#^Method Translation\\\\PlatformAdapter\\\\Loco\\\\Bridge\\\\Symfony\\\\DependencyInjection\\\\TranslationAdapterLocoExtension\\:\\:load\\(\\) has no return type specified\\.$#"
             count: 1
             path: src/Bridge/Symfony/DependencyInjection/TranslationAdapterLocoExtension.php
 
