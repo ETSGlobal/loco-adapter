@@ -12,11 +12,10 @@
 namespace Translation\PlatformAdapter\Loco\Tests\Functional;
 
 use Http\HttplugBundle\HttplugBundle;
-use Nyholm\BundleTest\BaseBundleTestCase;
 use Translation\PlatformAdapter\Loco\Bridge\Symfony\TranslationAdapterLocoBundle;
 use Translation\PlatformAdapter\Loco\Loco;
 
-class BundleInitializationTest extends BaseBundleTestCase
+class BundleInitializationTest
 {
     protected function getBundleClass()
     {
