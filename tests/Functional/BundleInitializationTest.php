@@ -12,20 +12,23 @@
 namespace Translation\PlatformAdapter\Loco\Tests\Functional;
 
 use Http\HttplugBundle\HttplugBundle;
+use Nyholm\BundleTest\TestKernel;
+use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Translation\PlatformAdapter\Loco\Bridge\Symfony\TranslationAdapterLocoBundle;
 use Translation\PlatformAdapter\Loco\Loco;
 
-class BundleInitializationTest
+class BundleInitializationTest extends KernelTestCase
 {
-    protected function getBundleClass()
+    protected static function getKernelClass(): string
     {
-        return TranslationAdapterLocoBundle::class;
+        return TestKernel::class;
     }
 
-    public function testRegisterBundle()
+    public function testRegisterBundle(): void
     {
         $kernel = $this->createKernel();
-        $kernel->addBundle(HttplugBundle::class);
+        $kernel->addTestBundle(TranslationAdapterLocoBundle::class);
+        $kernel->addTestBundle(HttplugBundle::class);
 
         $kernel->boot();
         $container = $kernel->getContainer();
